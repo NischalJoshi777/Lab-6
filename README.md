@@ -1,6 +1,6 @@
 # Lab 6: Association Rule Mining with Apriori and FP-Growth
 
-# Name: Nischal Joshi 																				Course: Advanced Data Mining and Big Data																		Date: July 19, 2025
+# Name: Nischal Joshi 																													Course: Advanced Data Mining and Big Data																					Date: July 19, 2025	
 
 # Objective
 
@@ -57,7 +57,7 @@ The project includes two key visualizations being used bar chart and the heat ma
 
 ## Challenges Faced
 
-The major challenges associated with lab as follows: 
+The major challenges associated with lab as follows:
 
 - Initially there was issue for parsing the csv data set and it was esolved using `encoding='latin-1'` and `on_bad_lines='skip'`
 - The data was very noisy and unclean it was cleaned by removing the missing ages, filtering out low-activity users and rarely rated books and also removing duplicate values.
