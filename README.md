@@ -1,6 +1,12 @@
 # Lab 6: Association Rule Mining with Apriori and FP-Growth
 
+<<<<<<< HEAD
 # Name: Nischal Joshi 																													Course: Advanced Data Mining and Big Data																					Date: July 19, 2025	
+=======
+### Name: Nischal Joshi 																		
+### Course: Advanced Data Mining and Big Data																		
+### Date: July 19, 2025
+>>>>>>> ff4287dfb858a511f89bcc678cc4646f1da0ed20
 
 # Objective
 
@@ -34,26 +40,66 @@ The project includes two key visualizations being used bar chart and the heat ma
     - *The Lovely Bones: A Novel* shows strong co-occurrence with several other top books, including *The Da Vinci Code* and *The Secret Life of Bees*.
     - The two *Harry Potter* books also display a strong mutual co-occurrence, reflecting common reading patterns among fans of the series.
 
+
+<img width="586" height="266" alt="Screenshot 2025-07-19 at 3 01 39 PM" src="https://github.com/user-attachments/assets/dcbbfdb6-94b7-46fd-8a1f-1e80747475b6" />
+
+<img width="654" height="572" alt="Screenshot 2025-07-19 at 3 02 35 PM" src="https://github.com/user-attachments/assets/1f3f42ae-2f02-49af-b858-1dd95056e358" />
+
 ## Methods & Tools
 
 - **Frequent Itemset Mining**:
-
   - Apriori (via `mlxtend.frequent_patterns.apriori`)
   - FP-Growth (via `mlxtend.frequent_patterns.fpgrowth`)
   - Used a **minimum support threshold of 0.01** (itemsets must appear in at least 1% of all transactions)
-- **Association Rule Mining**:
 
+- **Association Rule Mining**:
   - Generated rules based on confidence threshold
   - The association were generated using a minimum confidence threshold of **0.5** to ensure meaningful and reliable patterns.
   - Calculated support, confidence, and lift
 
-## Comparative Analysis
+## Comparative Analysis & Key Insights
 
 - **FP-Growth** performed slightly better and was faster. Generally, it is more scalable for large dataset, because it avoids generating candidate itemsets explicitly and instead builds a compact data structure (the FP-tree) to mine frequent patterns directly.
 - **Apriori**, while conceptually simpler and easier to understand, is slightly less efficient for the larger datasets. This is mainly because:
   - It uses a **candidate generation approach**, where it generates and tests all possible item combinations in a bottom-up manner.
   - This leads to **multiple passes over the dataset**, significantly increasing computation time.
   - The number of candidate itemsets can grow **exponentially** as the size of itemsets increases, causing high memory and processing overhead.
+
+<img width="403" height="243" alt="Screenshot 2025-07-19 at 3 06 03 PM" src="https://github.com/user-attachments/assets/ae6330c7-aa5e-4f5d-baf0-fa65e3c0aaff" />
+<img width="403" height="243" alt="Screenshot 2025-07-19 at 3 05 50 PM" src="https://github.com/user-attachments/assets/830825c5-1a02-41e7-8ba2-4e445065047e" />
+
+
+- **Association Rule Insights (Top 5 Books)**
+    -  Rule 1:
+        If someone reads: 'Harry Potter and the Prisoner of Azkaban (Book 3)'
+        They are 50.00% likely to also read: 'Harry Potter and the Chamber of Secrets (Book 2), Harry Potter and the Goblet of Fire (Book 4)'
+        This association is 29.11x stronger than random chance
+        Support: 0.015 (82 users)
+        Business Impact: Very Strong
+    -  Rule 2:
+       If someone reads: 'Harry Potter and the Chamber of Secrets (Book 2), Harry Potter and the Goblet of Fire (Book 4)'
+       They are 84.54% likely to also read: 'Harry Potter and the Prisoner of Azkaban (Book 3)'
+       This association is 29.11x stronger than random chance
+       Support: 0.015 (82 users)
+       Business Impact: Very Strong
+    -  Rule 3:
+       If someone reads: 'Harry Potter and the Goblet of Fire (Book 4)'
+       They are 54.67% likely to also read: 'Harry Potter and the Chamber of Secrets (Book 2), Harry Potter and the Prisoner of Azkaban (Book 3)'
+       This association is 28.58x stronger than random chance
+       Support: 0.015 (82 users)
+       Business Impact: Very Strong
+    -  Rule 4:
+       If someone reads: 'Harry Potter and the Chamber of Secrets (Book 2), Harry Potter and the Prisoner of Azkaban (Book 3)'
+       They are 75.93% likely to also read: 'Harry Potter and the Goblet of Fire (Book 4)'
+       This association is 28.58x stronger than random chance
+       Support: 0.015 (82 users)
+       Business Impact: Very Strong
+    - Rule 5:
+       If someone reads: 'Harry Potter and the Goblet of Fire (Book 4), Harry Potter and the Prisoner of Azkaban (Book 3)'
+       They are 81.19% likely to also read: 'Harry Potter and the Chamber of Secrets (Book 2)'
+       This association is 24.00x stronger than random chance
+       Support: 0.015 (82 users)
+       Business Impact: Very Strong
 
 ## Challenges Faced
 
