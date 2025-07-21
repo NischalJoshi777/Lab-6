@@ -1,12 +1,12 @@
 # Lab 6: Association Rule Mining with Apriori and FP-Growth
 
-<<<<<<< HEAD
-# Name: Nischal Joshi 																													Course: Advanced Data Mining and Big Data																					Date: July 19, 2025	
-=======
+### Name: Nischal Joshi 																													
+### Course: Advanced Data Mining and Big Data																				
+### Date: July 19, 2025	
+
 ### Name: Nischal Joshi 																		
 ### Course: Advanced Data Mining and Big Data																		
 ### Date: July 19, 2025
->>>>>>> ff4287dfb858a511f89bcc678cc4646f1da0ed20
 
 # Objective
 
