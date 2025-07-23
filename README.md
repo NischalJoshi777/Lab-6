@@ -4,10 +4,6 @@
 ### Course: Advanced Data Mining and Big Data																				
 ### Date: July 19, 2025	
 
-### Name: Nischal Joshi 																		
-### Course: Advanced Data Mining and Big Data																		
-### Date: July 19, 2025
-
 # Objective
 
 The objective of the lab is to explore the association rule mining using the Apriori and FP-Growth Algorithm on the trancational book rating data. The idea is to identiy the frequent itemset and generate a meaning ful association rules and visualize the patterns to identify any hidden relationships.
